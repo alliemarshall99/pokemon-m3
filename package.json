@@ -1,25 +1,27 @@
 {
-  "name": "concert-sponsor",
+  "name": "pokemon-m3",
   "version": "1.0.0",
-  "description": "Concert Location Website",
+  "description": "A Pokémon gallery website displaying Pokémon by type with hover details.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/degank/concert-sponsor.git"
+    "url": "git+https://github.com/alliemarshall99/Pokemon_Node_Web.git"
   },
-  "author": "Degan Kettles",
+  "author": "Allie Marshall",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/degank/concert-sponsor/issues"
+    "url": "https://github.com/alliemarshall99/Pokemon_Node_Web/issues"
   },
-  "homepage": "https://github.com/degank/concert-sponsor#readme",
+  "homepage": "https://github.com/alliemarshall99/Pokemon_Node_Web#readme",
   "dependencies": {
+    "axios": "^1.5.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "knex": "^2.5.1",
+    "knex": "^3.1.0",
     "mysql": "^2.18.1"
   }
 }
