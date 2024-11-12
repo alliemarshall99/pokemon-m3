@@ -1,5 +1,7 @@
 let express = require("express");
-let app = new express();                                                                     
+let app = new express();
+app.set("view engine", "ejs");
+app.set("views", "/home/ec2-user/pokemon-m3/views");                                                                  
 
 // set up database connection
 const knex = require("knex")({
@@ -24,7 +26,7 @@ app.get("/", (req, res) => {
     })
     .catch((error) => {
       console.error("Error fetching Pokémon data:", error);
-      res.status(500).send("Error fetching data");
+      res.status(500).send("Error fetching data: " + JSON.stringify(error));
     });
 });
 
@@ -51,7 +53,7 @@ app.get("/:type", (req, res) => {
     })
     .catch((error) => {
       console.error(`Error fetching ${type} Pokémon data:`, error);
-      res.status(500).send("Error fetching data");
+      res.status(500).send("Error fetching data" + JSON.stringify(error));
     });
 });
 
